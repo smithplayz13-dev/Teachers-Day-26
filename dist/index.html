@@ -3,70 +3,280 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#5b21b6" />
-    <title>Happy Teachers' Day!</title>
+    <meta name="theme-color" content="#1a0b2e" />
+    <title>Happy Teachers' Day — Class of 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,ital,soft,wght@9..144,0,900;9..144,1,900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="confetti confetti-one"></div><div class="confetti confetti-two"></div><div class="confetti confetti-three"></div>
-        <p class="eyebrow">A LITTLE CELEBRATION, WITH A LOT OF GRATITUDE</p>
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="day-label">5 SEPTEMBER · TEACHERS' DAY</p>
-            <h1 id="hero-title">To the teacher who makes every lesson <em>count.</em></h1>
-            <p class="lede">Thank you for turning commerce into confidence—and numbers into stories we can understand.</p>
-            <a class="jump-link" href="#messages">Read our notes <span aria-hidden="true">↓</span></a>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <nav class="nav-wrap" aria-label="Primary">
+      <div class="nav">
+        <a class="nav-logo" href="#">T<span>·</span>D 2026</a>
+        <div class="nav-links">
+          <a href="#class-memory">Class Photo</a>
+          <a href="#messages">Notes</a>
+          <a href="#commerce">Ledger</a>
+        </div>
+        <button class="nav-cta" id="confettiBtn" type="button">Celebrate 🎉</button>
+      </div>
+    </nav>
+
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="orb orb-c"></div>
+        <div class="grid-fade"></div>
+        <div class="grain"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="pill reveal">
+            <span class="dot"></span>
+            5 September · Teachers' Day · Commerce Batch
           </div>
-          <figure class="photo-wrap reveal delay-one">
-            <div class="photo-frame"><img src="public/teacher-photo.png" alt="Our wonderful class teacher" /></div>
-            <figcaption>For the teacher who adds value to every day.</figcaption>
-          </figure>
+
+          <h1 id="hero-title" class="reveal delay-one">
+            <span class="h-sub">To the teacher who</span>
+            <span class="h-big">makes every</span>
+            <span class="h-big accent">lesson <i>count.</i></span>
+          </h1>
+
+          <p class="lede reveal delay-two">
+            You turned balance sheets into belief, and commerce into confidence.<br />
+            This is our standing ovation — from every bench, for every lesson.
+          </p>
+
+          <div class="hero-actions reveal delay-three">
+            <a class="btn-primary" href="#class-memory">See our class photo <span>→</span></a>
+            <a class="btn-ghost" href="#messages">Read 10 notes</a>
+          </div>
+
+          <div class="hero-stats reveal delay-three">
+            <div class="stat"><b>10</b><span>notes from<br />your students</span></div>
+            <div class="stat"><b>1</b><span>class photo to<br />remember forever</span></div>
+            <div class="stat"><b>∞</b><span>gratitude,<br />compounded</span></div>
+          </div>
         </div>
-      </section>
 
-      <section class="love-note" aria-labelledby="thanks-title">
-        <div class="section-kicker">OUR FAVOURITE INVESTMENT</div>
-        <h2 id="thanks-title">Your patience, your belief in us, and your endless encouragement.</h2>
-        <p>Thank you for making room for every question, every mistake, and every new beginning. We are better learners because of you.</p>
-      </section>
+        <figure class="hero-photo reveal delay-two" aria-label="Teacher portrait">
+          <div class="photo-stack">
+            <div class="card-shadow"></div>
+            <div class="photo-card" id="tiltCard">
+              <div class="photo-tape tape-tl"></div>
+              <div class="photo-tape tape-tr"></div>
+              <div class="photo-frame">
+                <picture>
+                  <source srcset="public/teacher-photo.webp" type="image/webp" />
+                  <img src="public/teacher-photo.jpg" alt="Our wonderful class teacher" loading="eager" decoding="async" onerror="this.src='public/teacher-photo.full.jpg'" />
+                </picture>
+                <div class="photo-gloss"></div>
+              </div>
+              <figcaption>
+                <strong>For the teacher who adds value.</strong>
+                <span>Profit &amp; loss can’t measure this.</span>
+              </figcaption>
+              <div class="stamp">★ CLASS FAVOURITE 2026</div>
+            </div>
+            <div class="float-badge badge-top">Thank you, Ma'am! ✦</div>
+            <div class="float-badge badge-bottom">With love, Commerce</div>
+          </div>
+        </figure>
+      </div>
+    </header>
 
-      <section class="jokes" aria-labelledby="jokes-title">
-        <div class="section-heading"><p class="section-kicker">COMMERCE CORNER</p><h2 id="jokes-title">A few entries from our gratitude ledger</h2></div>
-        <div class="joke-list">
-          <article class="joke-card reveal"><span>01</span><p>Thank you for proving that the best assets in our classroom do not appear on the balance sheet.</p></article>
-          <article class="joke-card reveal delay-one"><span>02</span><p>Our favourite accounting rule: every debit of a doubt gets credited with your encouragement.</p></article>
-          <article class="joke-card reveal delay-two"><span>03</span><p>You made us realise that interest is not just a percentage—it is what great teaching creates.</p></article>
-          <article class="joke-card reveal delay-three"><span>04</span><p>With you as our teacher, the return on learning is always higher than expected.</p></article>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Thank you for making numbers feel like stories</span><i>✦</i>
+        <span>Every debit of doubt, credited with courage</span><i>✦</i>
+        <span>Our favourite asset — you</span><i>✦</i>
+        <span>Thank you for making numbers feel like stories</span><i>✦</i>
+        <span>Every debit of doubt, credited with courage</span><i>✦</i>
+        <span>Our favourite asset — you</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="love-note" aria-labelledby="thanks-title">
+      <div class="love-inner">
+        <p class="kicker">OUR FAVOURITE INVESTMENT</p>
+        <h2 id="thanks-title" class="reveal">Your patience,<br /><em>your belief in us.</em></h2>
+        <p class="love-copy reveal delay-one">
+          Thank you for making room for every question, every mistake, and every new beginning.<br />
+          We are better learners — and better humans — because of you.
+        </p>
+        <div class="bento reveal delay-two">
+          <div class="bento-card dark">
+            <span class="bento-icon">♡</span>
+            <h3>Endless<br />Encouragement</h3>
+            <p>You never let a doubt sit on the balance sheet.</p>
+          </div>
+          <div class="bento-card light">
+            <span class="bento-icon">✎</span>
+            <h3>Every<br />Question Counts</h3>
+            <p>No question too small, no curiosity too late.</p>
+          </div>
+          <div class="bento-card yellow">
+            <span class="bento-icon">✦</span>
+            <h3>Confidence,<br />Compounded</h3>
+            <p>Interest isn’t just a % — it’s what you create.</p>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="messages" id="messages" aria-labelledby="messages-title">
-        <p class="section-kicker">FROM YOUR STUDENTS</p>
-        <h2 id="messages-title">Ten tiny notes. One very big thank you.</h2>
-        <p class="message-intro">Add each student’s two-line message here before sharing.</p>
-        <div class="notes-grid">
-          <article class="student-note"><b>01 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note accent"><b>02 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note"><b>03 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note accent"><b>04 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note accent"><b>05 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note"><b>06 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note accent"><b>07 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note"><b>08 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note"><b>09 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
-          <article class="student-note accent"><b>10 · Student name</b><p>Write your first line here.<br />And your second line here.</p></article>
+    <!-- CLASS PHOTO SLIDE — THE STAR -->
+    <section class="class-slide" id="class-memory" aria-labelledby="class-title">
+      <div class="slide-header">
+        <p class="kicker kicker-light">SLIDE 05 · THE CLASS MEMORY</p>
+        <div class="slide-heading">
+          <h2 id="class-title"><span>Our</span> <em>Class Photo</em></h2>
+          <p>One frame. Every face that learned together, laughed together, and grew together — under your guidance.</p>
         </div>
-      </section>
+      </div>
 
-      <footer>
-        <p>Happy Teachers’ Day <span aria-hidden="true">✦</span> With love, from your class</p>
-      </footer>
-    </main>
+      <div class="slide-stage reveal">
+        <div class="stage-deco" aria-hidden="true">
+          <span class="deco-dot"></span><span class="deco-dot"></span><span class="deco-dot"></span>
+          <span class="deco-line"></span>
+          <span class="stage-label">PROJECTOR · 35MM · COMMERCE 2026</span>
+        </div>
+
+        <div class="slides-viewport" id="slidesViewport">
+          <div class="slides-track" id="slidesTrack">
+            <!-- Slide 1: Actual class photo -->
+            <div class="slide is-active" data-slide="0">
+              <div class="slide-media" id="classPhotoMedia">
+                <picture>
+                  <source srcset="public/class_photo.webp" type="image/webp" />
+                  <img src="public/class_photo.jpg" alt="Full class group photo with our teacher" loading="eager" decoding="async" fetchpriority="high" onerror="this.src='public/class_photo.full.jpg'" />
+                </picture>
+                <div class="slide-vignette"></div>
+                <button class="expand-btn" type="button" aria-label="Expand class photo" data-expand>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  Expand
+                </button>
+              </div>
+              <div class="slide-caption">
+                <div>
+                  <strong>Commerce Batch — 2026</strong>
+                  <span>Photographed on campus · 5th September · Every smile accounted for</span>
+                </div>
+                <a class="caption-action" href="public/class_photo.full.jpg" download>Download HD ↓</a>
+              </div>
+            </div>
+
+            <!-- Slide 2: Behind the scenes placeholder -->
+            <div class="slide" data-slide="1">
+              <div class="slide-media placeholder">
+                <div class="placeholder-inner">
+                  <p class="ph-kicker">SLIDE 02</p>
+                  <h3>Add your candid moments</h3>
+                  <p>Drag &amp; drop more photos here — classroom candids, farewell prep, or that last bench selfie.</p>
+                  <label class="upload-btn">
+                    <input type="file" accept="image/*" hidden />
+                    Choose photo
+                  </label>
+                </div>
+              </div>
+              <div class="slide-caption">
+                <div><strong>Your candids live here</strong><span>Click “Choose photo” to add a new slide instantly</span></div>
+                <span class="caption-hint">Supports JPG / PNG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-controls">
+          <div class="dots" role="tablist" aria-label="Class photo slides">
+            <button class="dot is-active" role="tab" aria-selected="true" data-go="0" aria-label="Slide 1">01 — Class Photo</button>
+            <button class="dot" role="tab" aria-selected="false" data-go="1" aria-label="Slide 2">02 — Candids</button>
+          </div>
+          <div class="arrows">
+            <button class="arrow" id="prevSlide" aria-label="Previous slide">←</button>
+            <button class="arrow" id="nextSlide" aria-label="Next slide">→</button>
+          </div>
+        </div>
+
+        <div class="film-strip" aria-hidden="true"></div>
+      </div>
+
+      <p class="slide-tip">Tip: hover the photo for a little magic ✨ · Click expand to view full-screen</p>
+    </section>
+
+    <section class="jokes" id="commerce" aria-labelledby="jokes-title">
+      <div class="section-head">
+        <p class="kicker">COMMERCE CORNER</p>
+        <h2 id="jokes-title">Entries from our <em>gratitude ledger</em></h2>
+      </div>
+      <div class="joke-grid">
+        <article class="joke-card reveal"><span class="joke-num">01</span><p>Thank you for proving the best assets in our classroom never appear on the balance sheet.</p><span class="joke-icon">◐</span></article>
+        <article class="joke-card reveal delay-one"><span class="joke-num">02</span><p>Every debit of a doubt gets credited with your encouragement. That’s our favourite rule.</p><span class="joke-icon">◎</span></article>
+        <article class="joke-card reveal delay-two"><span class="joke-num">03</span><p>You made us realise interest is not just a percentage — it’s what great teaching creates.</p><span class="joke-icon">✦</span></article>
+        <article class="joke-card reveal delay-three"><span class="joke-num">04</span><p>With you as our teacher, the return on learning is always higher than expected.</p><span class="joke-icon">⬢</span></article>
+      </div>
+    </section>
+
+    <section class="messages" id="messages" aria-labelledby="messages-title">
+      <div class="section-head">
+        <p class="kicker">FROM YOUR STUDENTS — FOR RUCHI MA'AM</p>
+        <h2 id="messages-title">Ten tiny notes. <em>One very big thank you.</em></h2>
+        <p class="message-intro">Tap any card to spotlight it &amp; read the full note. With love, from 9D &amp; 8th.</p>
+      </div>
+
+      <div class="notes-wrap">
+        <button class="notes-arrow left" id="notesPrev" aria-label="Scroll notes left">←</button>
+        <div class="notes-scroller" id="notesScroller">
+          <article class="student-note"><span class="note-id">01</span><b>Nyasa</b><p>Happy Teachers’ Day, Ma’am!! I love your examples — you turn the most random situation into a Commerce example and it actually makes everything easier to remember. Almost every class ends with all of us laughing. You’re the only teacher who makes the first days fun with verbal stories, word games, fish in the pond &amp; more. I never expected English to be interesting or commerce &amp; journaling to be un-complicated — before you taught me. Thank you for making the most crucial years more eventful than stressful.</p></article>
+          <article class="student-note accent"><span class="note-id">02</span><b>Lengade</b><p>Thank you, Ruchi Ma’am, for always supporting us and guiding us, and for being there with us even through the tough times. Happy Teacher’s Day! We’re truly grateful to have you as our teacher.</p></article>
+          <article class="student-note"><span class="note-id">03</span><b>Gurnika</b><p>Hiiii Ruchi ma’am thank you soo much for everything you have done. You have been teaching me since last year and I really love how you motivate and teach us — definitely the best class teacher. You are a really nice teacher and one of the best souls existing. I’ll always remember 8th grade English classes and I’m looking forward to make more good memories. Happy teachers dayyy 🫶🏻🫶🏻</p></article>
+          <article class="student-note accent"><span class="note-id">04</span><b>Drishti</b><p>HAPPY TEACHER'S DAY RUCHI MA'AM !!!💗 Thank you for always being such a great mentor and making this year truly wonderful. Your support and kindness means a looooott to me. You definitely have a total monopoly on being the best teacher in school!</p></article>
+          <article class="student-note"><span class="note-id">05</span><b>Agrimimi</b><p>Ma'am I'm honestly so grateful to have a class teacher like you, you've supported me sooooo much. You radiate positivity, you're a comforting presence at school for all 9D people. Happy Teachers Day!! Keep shinning ✨</p></article>
+          <article class="student-note accent"><span class="note-id">06</span><b>Aahana</b><p>Hii ma'am you are the complete best! I never believed ninth grade would be this special with you as my class teacher. I'm sorry I roam out soo much but um🥰 Nah but fr ma'am you are a really really great teacher by heart and I would always cherish you in my heart — xoxo Aahana</p></article>
+          <article class="student-note"><span class="note-id">07</span><b>Reyu</b><p>Happy Teachers' Day! Thank you for making your classroom a place where learning feels like an adventure. To the teacher who always sparked my curiosity and made school fun, thank you for everything you do!</p></article>
+          <article class="student-note accent"><span class="note-id">08</span><b>Shrishti</b><p>Thank you for managing our daily chaos without losing your sanity. If survival skills were a grade, you’d get an easy A+ for handling this class. We are grateful for everything you do — happy teachers day to the coolest teacher 🥰</p></article>
+          <article class="student-note"><span class="note-id">09</span><b>Goya Goya</b><p>Happy Teacher's Day to a truly wonderful educator, Ruchi ma'am! Thank you for your endless patience, guidance, and for making every lesson so inspiring.</p></article>
+          <article class="student-note accent"><span class="note-id">10</span><b>Kashu</b><p>Thank you for trying to debit knowledge into our minds without crediting us with too much homework! 😄📚</p></article>
+        </div>
+        <button class="notes-arrow right" id="notesNext" aria-label="Scroll notes right">→</button>
+      </div>
+
+      <div class="notes-grid">
+        <article class="student-note"><span class="note-id">01</span><b>Nyasa</b><p>Happy Teachers’ Day, Ma’am!! I love your examples — you turn the most random situation into a Commerce example and it actually makes everything easier to remember. Almost every class ends with all of us laughing. You’re the only teacher who makes the first days fun with verbal stories, word games, fish in the pond &amp; more. I never expected English to be interesting or commerce &amp; journaling to be un-complicated — before you taught me. Thank you for making the most crucial years more eventful than stressful.</p></article>
+        <article class="student-note accent"><span class="note-id">02</span><b>Lengade</b><p>Thank you, Ruchi Ma’am, for always supporting us and guiding us, and for being there with us even through the tough times. Happy Teacher’s Day! We’re truly grateful to have you as our teacher.</p></article>
+        <article class="student-note"><span class="note-id">03</span><b>Gurnika</b><p>Hiiii Ruchi ma’am thank you soo much for everything you have done. You have been teaching me since last year and I really love how you motivate and teach us — definitely the best class teacher. You are a really nice teacher and one of the best souls existing. I’ll always remember 8th grade English classes and I’m looking forward to make more good memories. Happy teachers dayyy 🫶🏻🫶🏻</p></article>
+        <article class="student-note accent"><span class="note-id">04</span><b>Drishti</b><p>HAPPY TEACHER'S DAY RUCHI MA'AM !!!💗 Thank you for always being such a great mentor and making this year truly wonderful. Your support and kindness means a looooott to me. You definitely have a total monopoly on being the best teacher in school!</p></article>
+        <article class="student-note accent"><span class="note-id">05</span><b>Agrimimi</b><p>Ma'am I'm honestly so grateful to have a class teacher like you, you've supported me sooooo much. You radiate positivity, you're a comforting presence at school for all 9D people. Happy Teachers Day!! Keep shinning ✨</p></article>
+        <article class="student-note"><span class="note-id">06</span><b>Aahana</b><p>Hii ma'am you are the complete best! I never believed ninth grade would be this special with you as my class teacher. I'm sorry I roam out soo much but um🥰 Nah but fr ma'am you are a really really great teacher by heart and I would always cherish you in my heart — xoxo Aahana</p></article>
+        <article class="student-note"><span class="note-id">07</span><b>Reyu</b><p>Happy Teachers' Day! Thank you for making your classroom a place where learning feels like an adventure. To the teacher who always sparked my curiosity and made school fun, thank you for everything you do!</p></article>
+        <article class="student-note accent"><span class="note-id">08</span><b>Shrishti</b><p>Thank you for managing our daily chaos without losing your sanity. If survival skills were a grade, you’d get an easy A+ for handling this class. We are grateful for everything you do — happy teachers day to the coolest teacher 🥰</p></article>
+        <article class="student-note"><span class="note-id">09</span><b>Goya Goya</b><p>Happy Teacher's Day to a truly wonderful educator, Ruchi ma'am! Thank you for your endless patience, guidance, and for making every lesson so inspiring.</p></article>
+        <article class="student-note accent"><span class="note-id">10</span><b>Kashu</b><p>Thank you for trying to debit knowledge into our minds without crediting us with too much homework! 😄📚</p></article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-big">Happy Teachers’ Day <span>✦</span></p>
+        <p class="footer-sub">With love, from your Commerce class — 5 Sept 2026</p>
+        <button class="footer-cta" id="footerConfetti">Burst confetti again 🎊</button>
+      </div>
+      <div class="footer-grain" aria-hidden="true"></div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Class photo fullscreen">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <img id="lightboxImg" src="public/class_photo.jpg" alt="Class photo fullscreen" />
+      <p>Press ESC or click outside to close</p>
+    </div>
+
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
     <script src="script.js"></script>
   </body>
 </html>

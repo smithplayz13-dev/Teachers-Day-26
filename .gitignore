@@ -1,0 +1,5 @@
+﻿# large original TIFFs misnamed as png - keep optimized jpgs only
+public/class_photo.png
+public/teacher-photo.png
+dist/public/teacher-photo.png
+public/teacher-new.png
